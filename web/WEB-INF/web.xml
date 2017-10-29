@@ -11,7 +11,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
-    <!--配置struts2的核心过滤器-->
+    <!--配置struts2的核心过滤器,默认只拦截请求-->
     <filter>
         <filter-name>struts2</filter-name>
         <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
@@ -19,9 +19,11 @@
     <filter-mapping>
         <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher><!--拦截请求-->
+        <dispatcher>FORWARD</dispatcher><!--拦截转发-->
+        <dispatcher>ERROR</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
-
-
 
     <display-name></display-name>
     <welcome-file-list>

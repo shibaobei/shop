@@ -41,7 +41,13 @@
 		<!-- 配置Hibernate的映射文件 -->
 		<property name="mappingResources">
 			<list>
-
+				<value>com/shop/entity/User.hbm.xml</value>
+				<value>com/shop/entity/Category.hbm.xml</value>
+				<value>com/shop/entity/Product.hbm.xml</value>
+				<value>com/shop/entity/CategorySecond.hbm.xml</value>
+				<value>com/shop/entity/Order.hbm.xml</value>
+				<value>com/shop/entity/OrderItem.hbm.xml</value>
+				<value>com/shop/entity/AdminUser.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
